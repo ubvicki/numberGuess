@@ -1,0 +1,271 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+  font-family: sans-serif;
+}
+
+body {
+  background: #EEF2F7;
+}
+.full{
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  min-height: 100%;
+  /* height: 100vh; */
+  width: 60%;
+  margin: 10px;
+  padding: 20px;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+  /* min-height: 200px;
+  width: 50vw;
+  margin: 100px auto;
+  background-color: white; */
+  border-radius: 5px;
+  /* background-color: #3EECAC; */
+  background-image: linear-gradient(19deg, #3eecac 0%, #EE74E1 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.check {
+  height: 40px;
+  width: 150px;
+  margin-top: 25px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  place-content: center;
+  background-color: #3EECAC;
+  background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+}
+
+#choice {
+  height: 40px;
+  width: 350px;
+  margin-top: 25px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  place-content: center;
+  background-color: #3EECAC;
+  background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game{
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#chance{
+  font-size: 24px;
+  margin: 20px 0px;
+}
+
+.display{
+  font-size: 24px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 9px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  /* align-items: center; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 9px 9px 0px 0px;
+}
+
+.modal-body {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  /* background-color: #5cb85c; */
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.play_again{
+  height: 40px;
+  width: 150px;
+  /* margin-top: 5px; */
+  /* padding-top: 5px; */
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 18px;
+  /* box-shadow: 10px 10px rgba(0, 0, 0, 0.5); */
+  place-content: center;
+  /* background-color: #3EECAC; */
+  background-image: linear-gradient(19deg, #0b70e2 0%, #f80a3e 100%);
+}
+svg{
+  height: 21px;
+  width: 21px;
+  padding-top: 5px;
+}
+@media screen and (max-width:426px) {
+  .main{
+    height: 100vh;
+    padding-top: 60px;
+    justify-content: flex-start;
+  }
+  #choice{
+    width: 300px;
+    font-size: 20px;
+  }
+
+  #display{
+    font-size: 20px;
+  }
+  .header{
+    padding-left: 40px;
+    font-size: 16px;   
+  }
+
+  
+}
+
+@media screen and (max-width:375px) {
+  .header{
+    font-size: 14px;
+    padding-left: 35px;
+  }
+  #display{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:634px) {
+  .main{
+    width: 100%;
+    margin: 0px;
+  }
+  
+}
+
+@media screen and (max-width:344px) {
+  .header{
+    font-size: 11px;
+    padding-left: 35px;
+  }
+  #display{
+    font-size: 16px;
+  }
+  
+  #choice{
+    width: 280px;
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width:768px) {
+  .main{
+    margin-top: 100px;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .main{
+    width: 60%;
+  }
+}
